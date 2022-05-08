@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpressPost - Seuvez votrwe colis</title>
+
+    <!-- fonts -->
+
+    <!-- custom links and cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <section id="confirm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="confirm-content">
+                        <div class="logo text-center">
+                            <div class="logo-1">
+                                <img src="images/ExpressPost_logo.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="logo-2">
+                                <img src="images/Icon_speechbubble_128px.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="logo-text">
+                                <h2>Où voulez-vous que votre colis soit livré ?</h2>
+                            </div>
+                        </div>
+                        <div class="confirm-card confirm-card-1">
+                            <div class="card-header">
+                                <img src="images/cancel.png" class="img-fluid cancel-icon" alt=""> <span class="card-header-text">Confirmation de livraison manquante</span>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Informations de livraison manquantes</strong></p>
+                                <ul class="mb-5">
+                                    <li>Date de livraison</li>
+                                    <li>Adresse de livraison</li>
+                                    <li>Paiement des frais de livraison (1€)</li>
+                                </ul>
+                                <div class="btn-wrapper text-center">
+                                    <button type="button" class="btn btn-custom" id="btn-confirm1" data-bs-toggle="modal" data-bs-target="#confirm3">Confirmer la livraison</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="confirm-card confirm-card-2">
+                            <div class="card-header">
+                                <img src="images/cancel.png" class="img-fluid cancel-icon" alt=""> <span class="card-header-text">Confirmation de livraison manquante</span>
+                            </div>
+                            <div class="card-body">
+                                <p>29. April 2022</p>
+                                <div class="divider"></div>
+                                <p><strong>Informations de livraison manquantes</strong></p>
+                                <ul class="mb-5">
+                                    <li>Date de livraison</li>
+                                    <li>Adresse de livraison</li>
+                                    <li>Paiement des frais de livraison (1€)</li>
+                                </ul>
+                                <div class="btn-wrapper text-center">
+                                    <p class="btn-wrapper-text">Le destinataire a commencé à replanifier <img src="images/check.png" alt="" class="img-fluid icon-check"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="confirm3" tabindex="-1" aria-labelledby="confirmlabel3" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-body expresspost-modal">
+                <div class="express-status">
+                    <h2>EXPRESSPOST</h2>
+                    <div class="modal-list">
+                        <p><strong>Statut :</strong> Confirmation de livraison manquante</p>
+                        <p><strong>No de colis: </strong> 36923-202008</p>
+                        <p><strong>Le paquet contient : </strong>Dell Chromebook</p>
+                        <p><strong>Frais de livraison : </strong>€1.00</p>
+                    </div>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm2">Confirmer la livraison</button>
+                    </div>
+                    <p>Votre colis sera retourné à l'expéditeur si vous ne confirmez pas la livraison</p>
+                </div>
+                <div class="express-date">
+                    <h2>EXPRESSPOST</h2>
+                    <h4 class="text-center">Choisissez votre date de livraison :</h4>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm4" onclick="changeToDeliver()">10. May 2022</button>
+                    </div>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm5" onclick="changeToDeliver()">11. May 2022</button>
+                    </div>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm6" onclick="changeToDeliver()">12. May 2022</button>
+                    </div>
+                </div>
+                <div class="express-deliver">
+                    <h2>EXPRESSPOST</h2>
+                    <h4 class="text-center">Choisissez une action lorsque vous n'êtes pas chez vous lorsque le colis est livré :</h4>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm4" onclick="changeToFinal()"><i class="fa-solid fa-house"></i> Laissez-le à votre porte</button>
+                    </div>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm5" onclick="changeToFinal()"><i class="fa-solid fa-trash-can-check"></i> Demandez à vos voisins</button>
+                    </div>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm6" onclick="changeToFinal()"><i class="fa-solid fa-magnifying-glass-location"></i> Partez au point de ramassage le plus proche</button>
+                    </div>
+                </div>
+                <div class="express-final">
+                    <h2>EXPRESSPOST</h2>
+                    <div class="img-wrapper">
+                        <img src="images/Dell_Chromebook.jpg" class="img-fluid" alt="">
+                    </div>
+                    <p class="text-center">Colis 36923-202008 est confirmé Date de livraison prévue : 10. May 2022</p>
+                    <div class="btn-wrapper text-center">
+                        <button type="button" class="btn btn-custom" id="btn-confirm4">CONFIRMER LES DÉTAILS</button>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        const card1 = document.querySelector('.confirm-card-1');
+        const card2 = document.querySelector('.confirm-card-2');
+        const status = document.querySelector('.express-status');
+        const date = document.querySelector('.express-date');
+        const deliver = document.querySelector('.express-deliver');
+        const final = document.querySelector('.express-final');
+        const btnConfirm = document.querySelector('#btn-confirm1');
+        const btnConfirm2 = document.querySelector('#btn-confirm2');
+        
+        btnConfirm.addEventListener('click', () => {
+            card1.style.display = 'none';
+            card2.style.display = 'block';
+        });
+        btnConfirm2.addEventListener('click', () => {
+            status.style.display = 'none';
+            date.style.display = 'block';
+        });
+        function changeToDeliver() {
+            date.style.display = 'none';
+            deliver.style.display = 'block';
+        }
+        function changeToFinal() {
+            deliver.style.display = 'none';
+            final.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

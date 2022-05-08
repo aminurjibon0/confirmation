@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    background: url(../images/body-img-resize.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+/* GLOBAL END */
+h2 {
+    font-size: 42px;
+    color: #fff;
+    margin: 20px 0 40px;
+}
+.logo-1 {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.logo-2 {
+    max-width: 100px;
+    margin: 0 auto;
+}
+.confirm-card {
+    background: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+.card-header {
+    background: rgb(241, 241, 241);
+}
+.cancel-icon {
+    max-width: 40px;
+    margin-right: 20px;
+}
+.card-header-text {
+    font-size: 20px;
+    font-weight: 500;
+}
+.card-body {
+    max-width: 350px;
+    margin: 40px auto;
+}
+.btn-custom {
+    background: #F7941D;
+    padding: 14px 35px;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.btn-custom:hover {
+    background: #F7941D;
+    color: #fff;
+}
+.divider {
+    height: 1px;
+    background:rgb(241, 241, 241);
+    margin-bottom: 20px;
+}
+.confirm-card-2 {
+    display: none;
+}
+.icon-check {
+    max-width: 20px;
+}
+.btn-wrapper-text {
+    font-size: 15px;
+}
+
+.expresspost-modal {
+    border-top: 15px solid #F7941D;
+}
+.modal-content {
+    border: none !important;
+}
+.expresspost-modal h2 {
+    color: #F7941D;
+    text-align: center;
+}
+.expresspost-modal .modal-list {
+    text-align: center;
+}
+.expresspost-modal .btn {
+    width: 100%;
+    padding: 8px 20px;
+    font-size: 16px;
+}
+.expresspost-modal p {
+    text-align: center;
+}
+.express-date,
+.express-deliver,
+.express-final {
+    display: none;
+}
+.express-date .btn,
+.express-deliver .btn {
+    margin-bottom: 10px;
+}
+.express-date .btn:hover,
+.express-deliver .btn:hover {
+    background: #fda840;
+}
+.express-final .img-wrapper {
+    text-align: center;
+}
+.express-final img {
+    max-width: 200px;
+    margin: 0 auto;
+}
